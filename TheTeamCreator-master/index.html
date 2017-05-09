@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>The Team Creator (Patent Pending [not really])</title>
+	<!-- Latest compiled and minified Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<style>
+		.jumbotron {
+			background-image: url(code-dark.jpg);
+		    background-attachment: fixed;
+		    background-position: center;
+		    background-repeat: no-repeat;
+		    background-size: cover;
+		    color:#fff;
+		}
+		#team1, #team1>.panel-heading {border-color: #d10000;}
+		#team1>.panel-heading {background-color: #d10000;}
+
+		#team2, #team2>.panel-heading {border-color: #ff6622;}
+		#team2>.panel-heading {background-color: #ff6622;}
+
+		#team3, #team3>.panel-heading {border-color: #ffda21;}
+		#team3>.panel-heading {background-color: #ffda21;}
+
+		#team4, #team4>.panel-heading {border-color: #33dd00;}
+		#team4>.panel-heading {background-color: #33dd00;}
+
+		#team5, #team5>.panel-heading {border-color: #1133cc;}
+		#team5>.panel-heading {background-color: #1133cc;}
+
+		#team6, #team6>.panel-heading {border-color: #220066;}
+		#team6>.panel-heading {background-color: #220066;}
+
+		#team7, #team7>.panel-heading {border-color: #330044;}
+		#team7>.panel-heading {background-color: #330044;}
+	</style>
+</head>
+<body>
+	<div class="jumbotron">
+		<div class="container">
+			<h1>Random Team Generator</h1>
+			<p><a class="btn btn-primary btn-lg" href="#" role="button" id="shuffleButton">Gets to Shufflin'</a></p>
+			<p><a class="btn btn-danger btn-lg" href="#" data-toggle="modal" data-target="#modal1" id="refreshButton" style="display:none;">Refresh to Run Again</a></p>
+		</div>	  
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				<div class="panel panel-primary" id="team1">
+				  <div class="panel-heading">
+				    <h3 class="panel-title">Team 1</h3>
+				  </div>
+				  <div class="panel-body" id="team1Panel">
+				  </div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="panel panel-primary" id="team2">
+				  <div class="panel-heading">
+				    <h3 class="panel-title">Team 2</h3>
+				  </div>
+				  <div class="panel-body" id="team2Panel">
+				  </div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="panel panel-primary" id="team3">
+				  <div class="panel-heading">
+				    <h3 class="panel-title">Team 3</h3>
+				  </div>
+				  <div class="panel-body" id="team3Panel">
+				  </div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="panel panel-primary" id="team4">
+				  <div class="panel-heading">
+				    <h3 class="panel-title">Team 4</h3>
+				  </div>
+				  <div class="panel-body" id="team4Panel">
+				  </div>
+				</div>
+			</div>
+		</div>
+		<div class="row centered">
+			<div class="col-md-3">
+				<div class="panel panel-primary" id="team5">
+				  <div class="panel-heading">
+				    <h3 class="panel-title">Team 5</h3>
+				  </div>
+				  <div class="panel-body" id="team5Panel">
+				  </div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="panel panel-primary" id="team6">
+				  <div class="panel-heading">
+				    <h3 class="panel-title">Team 6</h3>
+				  </div>
+				  <div class="panel-body" id="team6Panel">
+				  </div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="panel panel-primary" id="team7">
+				  <div class="panel-heading">
+				    <h3 class="panel-title">Team 7</h3>
+				  </div>
+				  <div class="panel-body" id="team7Panel">
+				  </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="modal1Label">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="modal1Label">Are you sure you want to refresh?</h4>
+	      </div>
+	      <div class="modal-body">
+	        <p>If you refresh now you will loose the last shuffle forever.</p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary" id="confirmRefresh">Refresh Page</button>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+		<!-- jquery -->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	
+	<script>
+	
+	var classArray = ['Alicia Valentino', 'Anthony Abbatiello', 'Ariene Ellefsen', 'Brian Karabinchak', 'Bryan Modula', 'Christopher Barnes', 'Daniel Blanco', 'Daniel Plaisimond', 'Dave Disney', 'Elana Celano', 'Eric Correia', 'Ilamaran Gurunathan', 'Jay Patel', 'John Roberts', 'Kalpana Gundrathi', 'Kenchetta Dudley', 'MADHUSUDHAN NIBHANUPUDI', 'Mark Lang', 'Matthew McHugh', 'Micah Isley', 'Michael Bottalico', 'Michael Vannucci', 'Mirita Lakhani', 'Mukund Kamatmhamai', 'Rebecca Renavitz', 'Vinay Kumar', 'Winston Lum', 'Xiaoying Wen'];
+	var numberOfTeams = 7;
+	var maxOnTeam = 4;
+
+	function pickAStudent() {
+		var random = Math.floor(Math.random()*classArray.length);
+		var name = classArray[random];
+		classArray.splice(random,1);
+		return name
+	}
+	
+	function pickTeams(){
+		for(i=1;i<numberOfTeams+1;i++){
+			var currentTeam = "team"+i;
+			for(j=0;j<maxOnTeam;j++){
+				$('#'+currentTeam+'Panel').append('<div>'+pickAStudent()+'</div>');
+			}
+		};
+		$('#shuffleButton').hide();
+		$('#refreshButton').show();
+	}
+
+	$(document).ready(function(){
+		$('#shuffleButton').click(function(){
+			pickTeams();	
+		});
+		$('#confirmRefresh').click(function(){
+			window.location.reload();
+		});
+	});
+	</script>
+</body>
+</html>
